@@ -13,7 +13,7 @@
  *     }
  * }
  */
-class Solution {
+class FlattenBTtoLinkedList {
     
     public TreeNode helper(TreeNode root){
         
