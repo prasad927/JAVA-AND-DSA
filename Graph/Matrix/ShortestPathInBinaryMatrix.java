@@ -41,7 +41,7 @@ class ShortestPathInBinaryMatrix{
                     }
                     
                     if(rowD==n-1 && colD==n-1){
-                        return level+1;
+                        return level+1;//dest-found
                     }
                     grid[rowD][colD]=1;
                     q.addLast(new pair(rowD,colD));
