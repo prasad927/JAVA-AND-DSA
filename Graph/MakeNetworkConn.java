@@ -14,15 +14,11 @@ class MakeNetworkConn{
            parent[i]=i;
            rank[i]=1;
        }
-       boolean[] connected = new boolean[n];
        int useLessConnection=0;
        int edgeForm=0;
        for(int i=0;i<connections.length;i++){
            int u = connections[i][0];
            int v = connections[i][1];
-           
-           connected[u]=true;
-           connected[v]=true;
            
            int par_u=find(u);
            int par_v=find(v);
@@ -45,8 +41,8 @@ class MakeNetworkConn{
            }    
        }
        
-       int CompConn = edgeForm+1;
-       int remComp = n-CompConn;
+       int compConn = edgeForm+1;
+       int remComp = n-compConn;
        
        if(useLessConnection<remComp){
            return -1;
