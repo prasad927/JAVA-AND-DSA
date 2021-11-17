@@ -14,6 +14,6 @@ class BS_PeakIndexInMountainArray {
                 low=mid;////move till mid only because mid is potential ans
             }
         }
-        return low;//to avoid error.
+        return low;
     }
 }
