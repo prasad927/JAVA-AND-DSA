@@ -18,7 +18,7 @@ Given a Binary tree. Find the level in binary tree which has the maximum number 
 
 class Tree{
 
-    public static void maxNodeLevel(Node root,ArrayList<Integer> track,int level,int[] max){
+    public static void maxNodeLevel(Node root,ArrayList<Integer> track,int level,int[] maxLvl){
         if(root==null){
             return;
         }
@@ -29,20 +29,20 @@ class Tree{
         
         track.set(level,track.get(level)+1);
         
-        if(track.get(level)==track.get(max[0])){
-            max[0] = Math.min(level,max[0]);
+        if(track.get(level)==track.get(maxLvl[0])){
+            maxLvl[0] = Math.min(level,maxLvl[0]);
         }else{
-            max[0] = track.get(level) > track.get(max[0]) ? level : max[0];
+            maxLvl[0] = track.get(level) > track.get(maxLvl[0]) ? level : maxLvl[0];
         }
         
-        maxNodeLevel(root.left,track,level+1,max);
-        maxNodeLevel(root.right,track,level+1,max);
+        maxNodeLevel(root.left,track,level+1,maxLvl);
+        maxNodeLevel(root.right,track,level+1,maxLvl);
     }
     
     public static int maxNodeLevel(Node root){
         ArrayList<Integer> track = new ArrayList<>();
-        int[] max = {0};
-        maxNodeLevel(root,track,0,max);
-        return max[0];//level
+        int[] maxLvl = {0};
+        maxNodeLevel(root,track,0,maxLvl);
+        return maxLvl[0];//level
     }
 }
