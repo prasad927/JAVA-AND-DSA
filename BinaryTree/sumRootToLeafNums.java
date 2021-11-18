@@ -14,11 +14,7 @@
  * }
  */
 
-/*
-Input: root = [1,2,3]-->level-order
-Output: 25
-*/
-class sumRootToLeafNums{
+class SumRootToLeafNums{
     
     public void sumNumbers(TreeNode root,int currSum,int[] ans){
         
