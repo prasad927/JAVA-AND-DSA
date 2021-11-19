@@ -1,4 +1,3 @@
-//Maximum Node Level
 
 /*
 Node is as follows:
@@ -16,7 +15,7 @@ class Node{
 Given a Binary tree. Find the level in binary tree which has the maximum number of nodes.
 */
 
-class Tree{
+class MaximumNodeLevel{
 
     public static void maxNodeLevel(Node root,ArrayList<Integer> track,int level,int[] maxLvl){
         if(root==null){
