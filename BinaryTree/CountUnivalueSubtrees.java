@@ -9,7 +9,7 @@
  *     }
  * }
  */
-
+//100%--> test cases pass on lintcode
 public class CountUnivalueSubtrees{
 
     private int countUnivalSubtrees(TreeNode root,int[] ans){
@@ -17,6 +17,7 @@ public class CountUnivalueSubtrees{
 			return 1;
 		}
 		
+		//
 		if(root.left==null && root.right==null){
 			ans[0]++;
 			return 1; //status
